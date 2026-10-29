@@ -1,0 +1,24 @@
+# Gradle / Kotlin
+.gradle/
+**/build/
+.kotlin/
+local.properties
+!gradle/wrapper/gradle-wrapper.jar
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# JVM crash/heap dumps
+hs_err_pid*
+*.hprof
+
+kotlin-js-store

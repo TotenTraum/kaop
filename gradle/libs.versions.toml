@@ -1,0 +1,24 @@
+# Single source of versions for the whole build.
+# The compiler plugin is compiled against a specific Kotlin compiler: bump `kotlin` everywhere at once.
+
+[versions]
+kotlin = "2.4.20"
+coroutines = "1.11.0"
+koin = "4.2.2"
+ktor = "3.6.0"
+publishPlugin = "0.37.0"
+
+[libraries]
+kotlin-compiler-embeddable = { module = "org.jetbrains.kotlin:kotlin-compiler-embeddable", version.ref = "kotlin" }
+kotlin-gradle-plugin-api = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin-api", version.ref = "kotlin" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+ktor-server-core = { module = "io.ktor:ktor-server-core", version.ref = "ktor" }
+ktor-server-di = { module = "io.ktor:ktor-server-di", version.ref = "ktor" }
+ktor-server-test-host = { module = "io.ktor:ktor-server-test-host", version.ref = "ktor" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+publish = { id = "com.vanniktech.maven.publish", version.ref = "publishPlugin" }
